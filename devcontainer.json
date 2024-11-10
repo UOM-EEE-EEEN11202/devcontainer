@@ -1,7 +1,7 @@
 {
-    "name": "UoM EEEN10242 C programming container",
+    "name": "UoM EEEN1XXX2 programming and software development container",
 	"build": {
-        "dockerfile": "./eeen10242_dockerfile",
+        "dockerfile": "./eeen1XXX2_dockerfile",
         "context": "."
     },
     "capAdd": ["SYS_PTRACE"],
