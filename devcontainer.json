@@ -1,9 +1,5 @@
 {
-    "name": "UoM EEEN1XXX2 programming and software development container",
-	"build": {
-        "dockerfile": "./eeen1XXX2_dockerfile",
-        "context": "."
-    },
+    "image": "ghcr.io/uom-eee-eeen1xxx2/dockerfile:latest",
     "capAdd": ["SYS_PTRACE"],
     "securityOpt": ["seccomp=unconfined"],
     "customizations": {
