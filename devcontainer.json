@@ -17,6 +17,8 @@
 		"github.codespaces",		
                 "eamodio.gitlens",
                 "streetsidesoftware.code-spell-checker",
+	        "ms-python.python",
+		"ms-toolsai.jupyter",
 		"formulahendry.code-runner"
 			]
 		}
