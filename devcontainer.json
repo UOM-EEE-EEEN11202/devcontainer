@@ -16,22 +16,22 @@
 		"GitHub.vscode-pull-request-github",
 		"github.codespaces",		
                 "eamodio.gitlens",
+                "ms-python.python",
+                "ms-toolsai.jupyter",
                 "streetsidesoftware.code-spell-checker",
-	        "ms-python.python",
-		"ms-toolsai.jupyter",
 		"formulahendry.code-runner"
-			]
-		}
-	},
-	"settings": {
-	    "terminal.integrated.defaultProfile.linux": "bash",
-		"terminal.integrated.profiles.linux": {
-          "bash": {
-            "path": "bash",
-            "icon": "terminal-bash"
-          },
-	    }
-	},
+		],
+	    "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    }
+                }
+            }
+        }
+    },
     "postAttachCommand": ["git", "config", "--global", "--add", "safe.directory", "${containerWorkspaceFolder}"],
 	"forwardPorts": [],
 	"remoteUser": "vscode"
