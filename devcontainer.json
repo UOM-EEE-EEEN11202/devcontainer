@@ -34,8 +34,8 @@
                 "formulahendry.code-runner",
                 "streetsidesoftware.code-spell-checker",
                 "charliermarsh.ruff"
-			],
-		    "settings": {
+            ],
+            "settings": {
                 "terminal.integrated.shellIntegration.enabled": false,
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "terminal.integrated.profiles.linux": {
