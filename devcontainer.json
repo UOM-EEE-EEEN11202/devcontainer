@@ -33,7 +33,8 @@
                 "ms-vscode.makefile-tools",
                 "ms-vscode.hexeditor",
                 "streetsidesoftware.code-spell-checker",
-                "charliermarsh.ruff"
+                "charliermarsh.ruff",
+                "James-Yu.latex-workshop"
             ],
             "settings": {
                 "terminal.integrated.shellIntegration.enabled": false,
