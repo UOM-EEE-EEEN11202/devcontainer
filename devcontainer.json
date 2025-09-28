@@ -31,7 +31,8 @@
                 "ms-vscode.hexeditor",
                 "streetsidesoftware.code-spell-checker",
                 "charliermarsh.ruff",
-                "James-Yu.latex-workshop"
+                "James-Yu.latex-workshop",
+                "uom-eee-eeen11202.c-cpp-codelens"
             ],
             "settings": {
                 "terminal.integrated.shellIntegration.enabled": false,
@@ -42,6 +43,8 @@
                         "icon": "terminal-bash"
                     }
                 },
+                "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+                "python.terminal.activateEnvironment": true,
                 "[python]": {
                     "editor.defaultFormatter": "charliermarsh.ruff",
                     "editor.formatOnSave": true,
@@ -49,9 +52,24 @@
                         "source.organizeImports.ruff": "explicit"
                     }
                 },
+                "notebook.formatOnSave.enabled": true,
+                "notebook.defaultFormatter": "charliermarsh.ruff",
+                "notebook.codeActionsOnSave": {
+                    "notebook.source.organizeImports": "explicit"
+                },
                 "[rust]": {
                     "editor.defaultFormatter": "rust-lang.rust-analyzer",
                     "editor.formatOnSave": true
+                },
+                "rust-analyzer.linkedProjects": [
+                    "./lab_k/Cargo.toml",
+                    "./lab_l/Cargo.toml",
+                    "./lab_m/Cargo.toml",
+                    "./lab_n/Cargo.toml",
+                    "./lab_o/Cargo.toml",
+                    "./lab_p/Cargo.toml",
+                    "./lab_q/Cargo.toml"
+                ]
                 },
                 "[c]": {
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
@@ -69,15 +87,6 @@
                     "--fallback-style=\"{ BasedOnStyle: Google, IndentWidth: 4}\""
                 ],
                 "lldb-dap.executable-path": "/usr/bin/lldb-dap-18",
-                "rust-analyzer.linkedProjects": [
-                    "./lab_k/Cargo.toml",
-                    "./lab_l/Cargo.toml",
-                    "./lab_m/Cargo.toml",
-                    "./lab_n/Cargo.toml",
-                    "./lab_o/Cargo.toml",
-                    "./lab_p/Cargo.toml",
-                    "./lab_q/Cargo.toml"
-                ],
                 "[latex-workshop.latex.tools]": {
                     "name": "lualatexmk",
                     "command": "latexmk",
