@@ -35,7 +35,8 @@
                 "uom-eee-eeen11202.c-cpp-codelens"
             ],
             "settings": {
-                "terminal.integrated.shellIntegration.enabled": false,
+                "git.openRepositoryInParentFolders": "always",
+				"terminal.integrated.shellIntegration.enabled": false,
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "terminal.integrated.profiles.linux": {
                     "bash": {
