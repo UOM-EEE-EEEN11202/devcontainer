@@ -49,7 +49,11 @@
                     "editor.formatOnSave": true,
                     "editor.codeActionsOnSave": {
                         "source.organizeImports.ruff": "explicit"
-                    }
+                    },
+                    "defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+                    "terminal.activateEnvironment": true,
+                    "testing.pytestEnabled": true,
+                    "testing.pytestPath": ${workspaceFolder}/.venv/bin/pytest,
                 },
                 "notebook.formatOnSave.enabled": true,
                 "notebook.defaultFormatter": "charliermarsh.ruff",
