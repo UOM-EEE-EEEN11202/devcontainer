@@ -65,13 +65,13 @@
                     "editor.formatOnSave": true
                 },
                 "rust-analyzer.linkedProjects": [
-                    "./lab-k/Cargo.toml",
-                    "./lab-l/Cargo.toml",
-                    "./lab-m/Cargo.toml",
-                    "./lab-n/Cargo.toml",
-                    "./lab-o/Cargo.toml",
-                    "./lab-p/Cargo.toml",
-                    "./lab-q/Cargo.toml"
+                    "../lab-k/Cargo.toml",
+                    "../lab-l/Cargo.toml",
+                    "../lab-m/Cargo.toml",
+                    "../lab-n/Cargo.toml",
+                    "../lab-o/Cargo.toml",
+                    "../lab-p/Cargo.toml",
+                    "../lab-q/Cargo.toml"
                 ]
                 },
                 "[c]": {
