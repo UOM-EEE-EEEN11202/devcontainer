@@ -72,8 +72,7 @@
                     "../lab-o/Cargo.toml",
                     "../lab-p/Cargo.toml",
                     "../lab-q/Cargo.toml"
-                ]
-                },
+                ],
                 "[c]": {
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
                     "editor.formatOnSave": true
@@ -86,9 +85,7 @@
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
                     "editor.formatOnSave": true
                 },
-                "llvm-vs-code-extensions.vscode-clangd.arguments": [
-                    "--fallback-style=\"{ BasedOnStyle: Google, IndentWidth: 4}\""
-                ],
+                "llvm-vs-code-extensions.vscode-clangd.arguments": "--fallback-style=\"{ BasedOnStyle: Google, IndentWidth: 4}\"",
                 "lldb-dap.executable-path": "/usr/bin/lldb-dap-18",
                 "[latex-workshop.latex.tools]": {
                     "name": "lualatexmk",
