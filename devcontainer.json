@@ -4,6 +4,16 @@
     "capAdd": ["SYS_PTRACE"],
     "securityOpt": ["seccomp=unconfined"],
     "customizations": {
+        "codespaces": {
+            "repositories": {
+                "UOM-EEE-EEEN11202/devcontainer": {
+                    "permissions": {
+                        "contents": "read",
+					    "packages": "read"
+                    }
+                }
+            }
+        },
         "vscode": {
             "extensions": [
                 "ms-vscode-remote.vscode-remote-extensionpack",
