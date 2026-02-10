@@ -3,14 +3,15 @@
     "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.1",
     "capAdd": ["SYS_PTRACE"],
     "securityOpt": ["seccomp=unconfined"],
+    "onCreateCommand": ["git", "submodule", "update", "--init", "--recursive"],
     "customizations": {
         "codespaces": {
             "repositories": {
                 "UOM-EEE-EEEN11202/devcontainer": {
-                    "permissions": {
-                        "contents": "read",
-					    "packages": "read"
-                    }
+                    "permissions": "read-all"
+                },
+                "UOM-EEE-EEEN11202/vscode": {
+                    "permissions": "read-all"
                 }
             }
         },
