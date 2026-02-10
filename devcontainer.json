@@ -47,6 +47,8 @@
             ],
             "settings": {
                 "git.openRepositoryInParentFolders": "always",
+	            "git.detectSubmodules": false,
+                "git.detectSubmodulesLimit": 0,
 				"terminal.integrated.shellIntegration.enabled": false,
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "terminal.integrated.profiles.linux": {
