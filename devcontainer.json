@@ -1,20 +1,13 @@
 {
     "name": "EEEN11202 devcontainer",
-    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.1",
+    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.4",
+    //"runArgs": ["--platform=linux/arm64"],
+    "containerEnv": {
+        "localWorkspaceFolder": "${containerWorkspaceFolder}"
+    },
     "capAdd": ["SYS_PTRACE"],
     "securityOpt": ["seccomp=unconfined"],
-    "onCreateCommand": ["git", "submodule", "update", "--init", "--recursive"],
     "customizations": {
-        "codespaces": {
-            "repositories": {
-                "UOM-EEE-EEEN11202/devcontainer": {
-                    "permissions": "read-all"
-                },
-                "UOM-EEE-EEEN11202/vscode": {
-                    "permissions": "read-all"
-                }
-            }
-        },
         "vscode": {
             "extensions": [
                 "ms-vscode-remote.vscode-remote-extensionpack",
@@ -23,7 +16,6 @@
                 "ms-vscode-remote.remote-ssh-edit",
                 "ms-vscode.remote-explorer",
                 "ms-vscode-remote.remote-wsl",
-                "ms-vscode.powershell",
                 "GitHub.vscode-pull-request-github",
                 "github.codespaces",
                 "github.copilot",
@@ -42,12 +34,11 @@
                 "ms-vscode.hexeditor",
                 "streetsidesoftware.code-spell-checker",
                 "charliermarsh.ruff",
-                "James-Yu.latex-workshop",
                 "uom-eee-eeen11202.c-cpp-codelens"
             ],
             "settings": {
                 "git.openRepositoryInParentFolders": "always",
-	            "git.detectSubmodules": false,
+                "git.detectSubmodules": false,
                 "git.detectSubmodulesLimit": 0,
 				"terminal.integrated.shellIntegration.enabled": false,
                 "terminal.integrated.defaultProfile.linux": "bash",
@@ -78,13 +69,13 @@
                     "editor.formatOnSave": true
                 },
                 "rust-analyzer.linkedProjects": [
-                    "../lab-k/Cargo.toml",
-                    "../lab-l/Cargo.toml",
-                    "../lab-m/Cargo.toml",
-                    "../lab-n/Cargo.toml",
-                    "../lab-o/Cargo.toml",
-                    "../lab-p/Cargo.toml",
-                    "../lab-q/Cargo.toml"
+                    "./lab-k/Cargo.toml",
+                    "./lab-l/Cargo.toml",
+                    "./lab-m/Cargo.toml",
+                    "./lab-n/Cargo.toml",
+                    "./lab-o/Cargo.toml",
+                    "./lab-p/Cargo.toml",
+                    "./lab-q/Cargo.toml"
                 ],
                 "[c]": {
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
@@ -114,16 +105,12 @@
                         "%DOC%"
                     ],
                     "env": {}
-                },
-                "[latex-workshop.latex.recipes]": {
-                        "name": "latexmk (lualatex)",
-                        "tools": ["lualatexmk"]
                 }
             }
         }
     },
     "waitFor": "postCreateCommand",
-    "postAttachCommand": ["git", "config", "--global", "--add", "safe.directory", "${containerWorkspaceFolder}/*"],
+    "postAttachCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && git config --global core.editor \"code --wait\"",
 	"forwardPorts": [],
 	"remoteUser": "vscode"
 }
