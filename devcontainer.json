@@ -1,6 +1,6 @@
 {
     "name": "EEEN11202 devcontainer",
-    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.4",
+    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.5",
     //"runArgs": ["--platform=linux/arm64"],
     "containerEnv": {
         "localWorkspaceFolder": "${containerWorkspaceFolder}"
@@ -34,13 +34,13 @@
                 "ms-vscode.hexeditor",
                 "streetsidesoftware.code-spell-checker",
                 "charliermarsh.ruff",
+                "ms-vscode.cmake-tools",
                 "uom-eee-eeen11202.c-cpp-codelens"
             ],
             "settings": {
-                "git.openRepositoryInParentFolders": "always",
-                "git.detectSubmodules": false,
-                "git.detectSubmodulesLimit": 0,
-				"terminal.integrated.shellIntegration.enabled": false,
+                "git.openRepositoryInParentFolders": "prompt",
+                "terminal.integrated.suggest.enabled": true,
+                "terminal.integrated.shellIntegration.decorationsEnabled": "both",
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "terminal.integrated.profiles.linux": {
                     "bash": {
@@ -48,7 +48,9 @@
                         "icon": "terminal-bash"
                     }
                 },
+                "editor.insertSpaces": true,
                 "[python]": {
+                    "editor.tabSize": 4,
                     "editor.defaultFormatter": "charliermarsh.ruff",
                     "editor.formatOnSave": true,
                     "editor.codeActionsOnSave": {
@@ -57,55 +59,36 @@
                     "defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
                     "terminal.activateEnvironment": true,
                     "testing.pytestEnabled": true,
-                    "testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
+                    "testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest"
                 },
+                "python-envs.alwaysUseUv": true,
                 "notebook.formatOnSave.enabled": true,
                 "notebook.defaultFormatter": "charliermarsh.ruff",
                 "notebook.codeActionsOnSave": {
                     "notebook.source.organizeImports": "explicit"
                 },
                 "[rust]": {
+                    "editor.tabSize": 2,
                     "editor.defaultFormatter": "rust-lang.rust-analyzer",
                     "editor.formatOnSave": true
                 },
-                "rust-analyzer.linkedProjects": [
-                    "./lab-k/Cargo.toml",
-                    "./lab-l/Cargo.toml",
-                    "./lab-m/Cargo.toml",
-                    "./lab-n/Cargo.toml",
-                    "./lab-o/Cargo.toml",
-                    "./lab-p/Cargo.toml",
-                    "./lab-q/Cargo.toml"
-                ],
                 "[c]": {
+                    "editor.tabSize": 2,
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
                     "editor.formatOnSave": true
                 },                
                 "[h]": {
+                    "editor.tabSize": 2,
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
                     "editor.formatOnSave": true
                 },
                 "[cpp]": {
+                    "editor.tabSize": 2,
                     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
                     "editor.formatOnSave": true
                 },
-                "llvm-vs-code-extensions.vscode-clangd.arguments": "--fallback-style=\"{ BasedOnStyle: Google, IndentWidth: 4}\"",
-                "lldb-dap.executable-path": "/usr/bin/lldb-dap-18",
-                "[latex-workshop.latex.tools]": {
-                    "name": "lualatexmk",
-                    "command": "latexmk",
-                    "args": [
-                        "-lualatex",
-		                "-shell-escape",
-                        "-synctex=1",
-                        "-interaction=nonstopmode",
-                        "-file-line-error",
-                        "-pdf",
-                        "-output-directory=%OUTDIR%",           
-                        "%DOC%"
-                    ],
-                    "env": {}
-                }
+                "llvm-vs-code-extensions.vscode-clangd.arguments": "--fallback-style=\"{ BasedOnStyle: Google}\"",
+                "lldb-dap.executable-path": "/usr/bin/lldb-dap-18"
             }
         }
     },
