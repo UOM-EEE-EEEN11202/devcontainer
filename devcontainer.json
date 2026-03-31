@@ -1,6 +1,6 @@
 {
     "name": "EEEN11202 devcontainer",
-    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.5",
+    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2526.6",
     //"runArgs": ["--platform=linux/arm64"],
     "containerEnv": {
         "localWorkspaceFolder": "${containerWorkspaceFolder}"
@@ -61,6 +61,7 @@
                     "testing.pytestEnabled": true,
                     "testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest"
                 },
+                "python.useEnvironmentsExtension": false,
                 "python-envs.alwaysUseUv": true,
                 "notebook.formatOnSave.enabled": true,
                 "notebook.defaultFormatter": "charliermarsh.ruff",
